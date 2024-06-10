@@ -1,4 +1,4 @@
-import ftn
+import 기말고사1
 
 my_id = 0
 login = False
@@ -9,15 +9,15 @@ while (True):
     if (login == False and (cmd == '3' or cmd == '4')):
         print("먼저 로그인을 해주세요")
     elif (cmd == '1'):
-        my_id = ftn.login()
+        my_id = 기말고사1.login()
         login = True
     elif (cmd == '2'):
-        my_id = ftn.register()
+        my_id = 기말고사1.register()
         login = True
     elif (login == True and cmd == '3'):
-        ftn.schedule(my_id)
+        기말고사1.schedule(my_id)
     elif (login == True and cmd == '4'):
-        ftn.payment(my_id)
+        기말고사1.payment(my_id)
     elif (cmd == '0'):
         break
     print()

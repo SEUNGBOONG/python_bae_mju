@@ -7,7 +7,6 @@ def login():
     if(id in member.keys() and member[id][0] ==pw):
         print(member[id][1],"님 반갑습니다.")
         return id
-
     else:
         print("로그인에 실패했습니다.")
 

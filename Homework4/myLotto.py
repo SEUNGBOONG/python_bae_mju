@@ -1,6 +1,19 @@
 import random
+import datetime
 
+my_money_book = {
+    '점심': ('2022년 6월 8일 10시 30분', '지출', '외식', 10000, '파스타 신용카드 사용')
+}
 winnum = set()
+
+def a():
+    return datetime.datetime.strftime("%Y년 %m월 %d일 %h시 %m분")
+
+def income():
+    entry = input("수입을 입력하세요: 예) 월급 월급 200000 카페알바")
+    item, group, amount, *memo = entry.split()
+    memo=''.join(memo) if memo else '.'
+    my_money_book[item] =(a(), '수입',group,int(amount),memo)
 
 def buyautolotto():
     lotto = []
@@ -10,6 +23,14 @@ def buyautolotto():
             numbers.add(random.randint(1, 45))
         lotto.append(numbers)
     return lotto
+
+def buy():
+    lotto= []
+    for _ in range(5):
+        number=set()
+        while len(number) <6:
+            number.add(random.randint(1,45))
+        lotto.append(number)
 
 def printlotto(lotto):
     for index, nums in enumerate(lotto):
